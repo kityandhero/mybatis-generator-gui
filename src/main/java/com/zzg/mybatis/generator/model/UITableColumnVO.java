@@ -28,6 +28,10 @@ public class UITableColumnVO {
 
     public void setColumnName(String columnName) {
         this.columnName.set(columnName);
+
+        if(this.propertyName.isEmpty().get()){
+            this.propertyName.set(columnName) ;
+        }
     }
 
     public String getJdbcType() {
